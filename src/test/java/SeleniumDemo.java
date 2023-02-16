@@ -3,6 +3,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class SeleniumDemo {
 
@@ -16,12 +17,12 @@ public class SeleniumDemo {
 
         String actualTitle = driver.getTitle();
 
-        if (actualTitle.contains(expectedTitle)) {
-            System.out.println("TEST PASSED!");
-        } else
-            System.out.println("TEST FAILED! The current title is: " + actualTitle + " The expected title was: " + expectedTitle);
+//        if (actualTitle.contains(expectedTitle)) {
+//            System.out.println("TEST PASSED!");
+//        } else
+//            System.out.println("TEST FAILED! The current title is: " + actualTitle + " The expected title was: " + expectedTitle);
 
-
+        Assert.assertEquals(actualTitle, expectedTitle);
     }
 }
 
